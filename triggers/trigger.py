@@ -1,12 +1,8 @@
+
 class Trigger:
-    def __init__(self):
+    def __init__(self, macro):
         self.active = False
+        self.macro = macro
     
-    def activate(self):
-        self.active = True
-
-    def deactivate(self):
-        self.active = False
-
-    def trigger(self):
-        self.activate()
+    def trigger(self, config):
+        self.macro.run(config)
